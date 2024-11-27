@@ -1,0 +1,3357 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Clases python"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 190,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hola mundo\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hola mundo\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 192,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(13.1, float)"
+      ]
+     },
+     "execution_count": 192,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = 3.4\n",
+    "b = 9.7\n",
+    "c = a + b\n",
+    "c,type(c)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 193,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(int, float, str)"
+      ]
+     },
+     "execution_count": 193,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(10),type(10.10),type(\"hola\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 195,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "([1, 3, 4, 5, 6, 'hola', 'mundo', 5.6], (1, 3, 4, 5, 6, 'hola', 'mundo', 5.6))"
+      ]
+     },
+     "execution_count": 195,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "L = [1,3,4,5,6,\"hola\",\"mundo\",5.6] #Lista\n",
+    "T = (1,3,4,5,6,\"hola\",\"mundo\",5.6) #Tupla\n",
+    "L,T"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 196,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(list, tuple)"
+      ]
+     },
+     "execution_count": 196,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(L),type(T)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 201,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[]\n",
+      "[1, 4, 1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "lista = []\n",
+    "print(lista)\n",
+    "lista.append(1)\n",
+    "lista.append(4)\n",
+    "lista.append(1)\n",
+    "print(lista)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 203,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "()\n"
+     ]
+    },
+    {
+     "ename": "AttributeError",
+     "evalue": "'tuple' object has no attribute 'append'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[203], line 3\u001b[0m\n\u001b[1;32m      1\u001b[0m tupla \u001b[38;5;241m=\u001b[39m ()\n\u001b[1;32m      2\u001b[0m \u001b[38;5;28mprint\u001b[39m(tupla)\n\u001b[0;32m----> 3\u001b[0m \u001b[43mtupla\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mappend\u001b[49m(\u001b[38;5;241m1\u001b[39m)\n",
+      "\u001b[0;31mAttributeError\u001b[0m: 'tuple' object has no attribute 'append'"
+     ]
+    }
+   ],
+   "source": [
+    "tupla = ()\n",
+    "print(tupla)\n",
+    "tupla.append(1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 206,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4428623552\n",
+      "4428623552\n",
+      "4312874920\n",
+      "4424399872\n"
+     ]
+    }
+   ],
+   "source": [
+    "lista = []\n",
+    "print ( id(lista) )\n",
+    "lista.append(4)\n",
+    "print ( id(lista) )\n",
+    "\n",
+    "tupla = ()\n",
+    "print ( id(tupla) )\n",
+    "tupla = (1,3,4)\n",
+    "print ( id(tupla) )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 208,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1, 2, 3)\n"
+     ]
+    }
+   ],
+   "source": [
+    "lista = [1,2,3]\n",
+    "print ( tuple(lista))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 209,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 209,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int(8.7)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 213,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "range(0, 10)"
+      ]
+     },
+     "execution_count": 213,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = range(0,10)\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 215,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def f(x):\n",
+    "    return x**2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 218,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['a', 112314, 1.4324, 'cualquier', <function f at 0x107edcc20>]\n"
+     ]
+    }
+   ],
+   "source": [
+    "tmp = [\"a\",112314,1.4324,\"cualquier\",f]\n",
+    "print( tmp) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 227,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "16"
+      ]
+     },
+     "execution_count": 227,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mi_f = tmp[-1]\n",
+    "mi_f(4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 222,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 222,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tmp[-1](2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 223,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'cualquier'"
+      ]
+     },
+     "execution_count": 223,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tmp[-2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 230,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 8, 2.3)\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = list(range(0,10)),8,2.3\n",
+    "print(a)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 237,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "lista = [1,2,3]\n",
+    "print(lista[0])\n",
+    "\n",
+    "a,b,c = 1,2,3\n",
+    "a = 1\n",
+    "b = 2\n",
+    "c = 3\n",
+    "print(a)\n",
+    "print(b)\n",
+    "print(c)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 238,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "range"
+      ]
+     },
+     "execution_count": 238,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(range(0,10))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as npasdf_asdf\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 244,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "([1, 2, 3, 1, 2, 3, 1, 2, 3], 'holaholahola')"
+      ]
+     },
+     "execution_count": 244,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "[1,2,3]*3,\"hola\"*3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 246,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 3,  9, 12, 15])"
+      ]
+     },
+     "execution_count": 246,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.array([1,3,4,5])*3\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 247,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "numpy.ndarray"
+      ]
+     },
+     "execution_count": 247,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(np.array([1,3,4,5]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 249,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from numpy import *"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 250,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "numpy.ndarray"
+      ]
+     },
+     "execution_count": 250,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(array([1,4,5,6]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 252,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "11"
+      ]
+     },
+     "execution_count": 252,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def suma(a , b):\n",
+    "    return a+b\n",
+    "\n",
+    "suma(5,6)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 253,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12.2"
+      ]
+     },
+     "execution_count": 253,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "suma(5.5,6.7)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 254,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'holamundo'"
+      ]
+     },
+     "execution_count": 254,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "suma(\"hola\",\"mundo\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 258,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 3, 4, 4]"
+      ]
+     },
+     "execution_count": 258,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "[1,3,4] + [4]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 255,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 3, 4, 5, 5, 6, 7, 8]"
+      ]
+     },
+     "execution_count": 255,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "suma([1,3,4,5],[5,6,7,8])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 256,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([ 9, 12, 10])"
+      ]
+     },
+     "execution_count": 256,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "suma(array([1,3,4]),np.array([8,9,6]))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# ¿Por qué funciona?\n",
+    "\n",
+    "https://docs.python.org/es/3/tutorial/classes.html"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "\n",
+    "\n",
+    "<span style=\"color:#66e0ff\"> </span>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Concepto de Ámbito\n",
+    "\n",
+    "El ámbito en programación se refiere al contexto en el cual una variable o función es accesible. En Python, existen varios niveles de ámbito:\n",
+    "\n",
+    "- 1. <span style=\"color:#66e0ff\"> **Ámbito Local** </span>: Es el espacio de nombres que se crea cuando una función es llamada. Las variables definidas dentro de una función solo son accesibles dentro de esa función.\n",
+    "- 2. <span style=\"color:#66e0ff\"> **Ámbito de Función Envolvente (Enclosing, Encerrando)**</span>: Es el espacio de nombres de cualquier función que encierra a otra función. Las variables en este ámbito son accesibles desde funciones anidadas.\n",
+    "- 3. <span style=\"color:#66e0ff\">**Ámbito Global**</span>: Es el espacio de nombres del módulo actual. Las variables definidas en este ámbito son accesibles desde cualquier lugar del módulo.\n",
+    "- 4. <span style=\"color:#66e0ff\">**Ámbito Incorporado**</span>: Es el espacio de nombres que contiene las funciones y variables incorporadas de Python, como `len` y `range`.\n",
+    "\n",
+    "El uso correcto de los ámbitos es crucial para evitar errores y hacer que el código sea más legible y mantenible.\n",
+    "\n",
+    "## Reglas importantes sobre ámbitos:\n",
+    "\n",
+    "Regla LEGB (orden de búsqueda de variables):\n",
+    "\n",
+    "- <span style=\"color:#f5c1a9\"> L (Local)</span>: Variables dentro de la función\n",
+    "- <span style=\"color:#f5c1a9\"> E (Enclosing)</span>: Variables en funciones externas\n",
+    "- <span style=\"color:#f5c1a9\"> G (Global)</span>: Variables globales\n",
+    "- <span style=\"color:#f5c1a9\"> B (Built-in)</span>: Funciones/variables incorporadas de Python\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Variable local"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 261,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Variable local en funcion_local\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Variable Local\n",
+    "def funcion_local():\n",
+    "    variable_local = \"Variable local en funcion_local\"\n",
+    "    print(variable_local)\n",
+    "    \n",
+    "funcion_local()\n",
+    "#print(variable_local) # ❌ Error: variable_local no definida"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Variable Enclosing Envolvente "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 262,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Variable enclosing en funcion_externa\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Variable Enclosing Envolvente \n",
+    "def funcion_externa():\n",
+    "    variable_enclosing = \"Variable enclosing en funcion_externa\"\n",
+    "    \n",
+    "    def funcion_interna():\n",
+    "        print(variable_enclosing)\n",
+    "    \n",
+    "    funcion_interna()\n",
+    "    \n",
+    "funcion_externa()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Variable Global"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 270,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Local x: enclosing\n",
+      "Enclosing x: enclosing\n",
+      "Global x: global\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Ejemplo de LEGB\n",
+    "x = \"global\"  # Global\n",
+    "\n",
+    "def externa():\n",
+    "    x = \"enclosing\"  # Enclosing\n",
+    "    \n",
+    "    def interna():\n",
+    "        #x = \"local\"  # Local\n",
+    "        print(\"Local x:\", x)\n",
+    "    \n",
+    "    interna()\n",
+    "    print(\"Enclosing x:\", x)\n",
+    "\n",
+    "externa()\n",
+    "print(\"Global x:\", x)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 267,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "global\n"
+     ]
+    }
+   ],
+   "source": [
+    "def muestra_x():\n",
+    "    print(x)\n",
+    "    \n",
+    "muestra_x()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Ejemplo"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```mermaid\n",
+    "flowchart TB\n",
+    "    subgraph Global [\"Ámbito Global\"]\n",
+    "        direction TB\n",
+    "        G[contador = 0]\n",
+    "        ConfigG[MAX_INTENTOS = 3]\n",
+    "        \n",
+    "        subgraph FuncionA [\"Función incrementar()\"]\n",
+    "            direction TB\n",
+    "            A1[global contador]\n",
+    "            A2[contador += 1]\n",
+    "        end\n",
+    "        \n",
+    "        subgraph FuncionB [\"Función crear_contador()\"]\n",
+    "            direction TB\n",
+    "            B1[total = 0]\n",
+    "            \n",
+    "            subgraph FuncionC [\"Función interna_sumar()\"]\n",
+    "                direction TB\n",
+    "                C1[nonlocal total]\n",
+    "                C2[total += valor]\n",
+    "            end\n",
+    "        end\n",
+    "    end\n",
+    "\n",
+    "    %% Conexiones\n",
+    "    G --> A1\n",
+    "    A1 --> A2\n",
+    "    B1 --> C1\n",
+    "    C1 --> C2\n",
+    "\n",
+    "    %% Estilos\n",
+    "    classDef globalScope fill:#ffcccb,stroke:#333,stroke-width:2px,color:#000;\n",
+    "    classDef functionScope fill:#90EE90,stroke:#333,stroke-width:2px,color:#000;\n",
+    "    classDef innerScope fill:#87CEEB,stroke:#333,stroke-width:2px,color:#000;\n",
+    "    classDef variable fill:#FFE4B5,stroke:#333,stroke-width:1px,color:#000;\n",
+    "\n",
+    "    class Global globalScope;\n",
+    "    class FuncionA,FuncionB functionScope;\n",
+    "    class FuncionC innerScope;\n",
+    "    class G,ConfigG,A1,A2,B1,C1,C2 variable;\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 275,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 275,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Variables globales\n",
+    "contador = 0\n",
+    "MAX_INTENTOS = 3\n",
+    "\n",
+    "def incrementar():\n",
+    "    global contador  # Accede a la variable global\n",
+    "    contador += 1\n",
+    "\n",
+    "def crear_contador():\n",
+    "    total = 0  # Variable en ámbito enclosing (encerrada)\n",
+    "    \n",
+    "    def interna_sumar(valor):\n",
+    "        nonlocal total  # Accede a la variable del ámbito exterior\n",
+    "        total += valor\n",
+    "        \n",
+    "        return total\n",
+    "    \n",
+    "    return interna_sumar\n",
+    "\n",
+    "#print(f\"contador: {contador}\")\n",
+    "incrementar()\n",
+    "#print(f\"contador: {contador}\")\n",
+    "incrementar()\n",
+    "#print(f\"contador: {contador}\")\n",
+    "\n",
+    "funcion_interna = crear_contador()\n",
+    "funcion_interna(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 276,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 276,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "funcion_interna(5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Ejemplo 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "1\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 1. Lectura vs Modificación\n",
+    "def ejemplo_lectura():\n",
+    "    mensaje = \"Hola\"\n",
+    "    \n",
+    "    def interna1():\n",
+    "        print(mensaje)  # ✅ Podemos LEER sin nonlocal\n",
+    "    \n",
+    "    def interna2():\n",
+    "        # mensaje = \"Adiós\"  # ❌ Error: no podemos modificar sin nonlocal\n",
+    "        pass\n",
+    "    \n",
+    "    def interna3():\n",
+    "        nonlocal mensaje\n",
+    "        mensaje = \"Adiós\"  # ✅ Podemos modificar con nonlocal\n",
+    "\n",
+    "# 2. Global vs Nonlocal\n",
+    "variable_global = 0\n",
+    "\n",
+    "def funcion_externa():\n",
+    "    variable_enclosing = 0\n",
+    "    \n",
+    "    def funcion_interna():\n",
+    "        global variable_global    # Afecta a la variable global\n",
+    "        nonlocal variable_enclosing  # Afecta a la variable del ámbito externo\n",
+    "        \n",
+    "        variable_global += 1\n",
+    "        variable_enclosing += 1\n",
+    "\n",
+    "# 3. Caso práctico: Contador con estado\n",
+    "def crear_contador():\n",
+    "    contador = 0\n",
+    "    \n",
+    "    def incrementar():\n",
+    "        nonlocal contador\n",
+    "        contador += 1\n",
+    "        return contador\n",
+    "    \n",
+    "    def decrementar():\n",
+    "        nonlocal contador\n",
+    "        contador -= 1\n",
+    "        return contador\n",
+    "    \n",
+    "    def obtener_valor():\n",
+    "        return contador  # Solo lectura, no necesita nonlocal\n",
+    "    \n",
+    "    return {\n",
+    "        'incrementar': incrementar,\n",
+    "        'decrementar': decrementar,\n",
+    "        'obtener': obtener_valor\n",
+    "    }\n",
+    "\n",
+    "# Uso del contador\n",
+    "mi_contador = crear_contador()\n",
+    "print(mi_contador['incrementar']())  # 1\n",
+    "print(mi_contador['incrementar']())  # 2\n",
+    "print(mi_contador['decrementar']())  # 1\n",
+    "print(mi_contador['obtener']())      # 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**El espacio de nombres local** a una función se crea cuando la función es llamada, y se elimina cuando la función retorna o lanza una excepción que no se maneje dentro de la función. (Podríamos decir que lo que pasa en realidad es que ese espacio de nombres se «olvida».) Por supuesto, las llamadas recursivas tienen cada una su propio espacio de nombres local.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "hay 3 o 4 ámbitos anidados cuyos espacios de nombres son directamente accesibles:\n",
+    "\n",
+    "- el alcance más interno, que es inspeccionado primero, contiene los nombres locales\n",
+    "- los alcances de cualquier función que encierra a otra, son inspeccionados a partir del alcance más cercano, contienen nombres no locales, pero también no globales\n",
+    "- el penúltimo alcance contiene nombres globales del módulo actual\n",
+    "- el alcance más externo (el último inspeccionado) es el espacio de nombres que contiene los nombres integrados"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 277,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import builtins\n",
+    "\n",
+    "#Este módulo proporciona acceso directo a todos los identificadores “incorporados” de Python."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 280,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12"
+      ]
+     },
+     "execution_count": 280,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sum( (3,4,5) )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "builtins.chr(64)\n",
+    "builtins.sum( (1,5) )"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## La forma más sencilla de definición de una clase se ve así:\n",
+    "\n",
+    "```python\n",
+    "class ClassName:\n",
+    "    <statement-1>\n",
+    "    .\n",
+    "    .\n",
+    "    .\n",
+    "    <statement-N>\n",
+    "```\n",
+    "\n",
+    "Cuando se ingresa una definición de clase, se crea un nuevo espacio de nombres, el cual se usa como ámbito local; por lo tanto, todas las asignaciones a variables locales van a este nuevo espacio de nombres. En particular, las definiciones de funciones asocian el nombre de las funciones nuevas allí.\n",
+    "\n",
+    "Cuando una definición de clase se finaliza normalmente (al llegar al final) se crea un objeto clase. Básicamente, este objeto envuelve los contenidos del espacio de nombres creado por la definición de la clase"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 281,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class MyClass:\n",
+    "    \"\"\"A simple example class\"\"\"\n",
+    "    i = 12345\n",
+    "\n",
+    "    def f(self):\n",
+    "        return 'hello world'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Objetos clase\n",
+    "\n",
+    "\n",
+    "Los objetos clase soportan dos tipos de operaciones: hacer referencia a atributos e instanciación.\n",
+    "\n",
+    "Para hacer referencia a atributos se usa la sintaxis estándar de todas las referencias a atributos en Python: **objeto.nombre**. Los nombres de atributo válidos son todos los nombres que estaban en el espacio de nombres de la clase cuando ésta se creó. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 282,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12345"
+      ]
+     },
+     "execution_count": 282,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "MyClass.i"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 283,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<function __main__.MyClass.f(self)>"
+      ]
+     },
+     "execution_count": 283,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "MyClass.f"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### La instanciación de clases \n",
+    "\n",
+    "usa la notación de funciones. Hacé de cuenta que el objeto de clase es una función sin parámetros que retorna una nueva instancia de la clase."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 284,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = MyClass()\n",
+    "# crea una nueva instancia de la clase y asigna este objeto a la variable local x."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Constructor\n",
+    "\n",
+    "Muchas clases necesitan crear objetos con instancias en un estado inicial particular. Por lo tanto una clase puede definir un método especial llamado __init__(), de esta forma"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 285,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(3.0, -4.5)"
+      ]
+     },
+     "execution_count": 285,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "class Complex:\n",
+    "    def __init__(self, realpart, imagpart):\n",
+    "        self.r = realpart\n",
+    "        self.i = imagpart\n",
+    "\n",
+    "x = Complex(3.0, -4.5)\n",
+    "x.r, x.i"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 286,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(5.0, 10.5)"
+      ]
+     },
+     "execution_count": 286,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "y = Complex(5.0, 10.5)\n",
+    "y.r, y.i"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ejemplo "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 287,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Clase Coche\n",
+    "class Coche:\n",
+    "    def __init__(self, marca, modelo):\n",
+    "        self.marca = marca\n",
+    "        self.modelo = modelo\n",
+    "\n",
+    "# Objeto (instancia de la clase)\n",
+    "mi_coche = Coche(\"Toyota\", \"Corolla\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 288,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The value is: 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Example:\n",
+    "    def __init__(self, value):\n",
+    "        self.value = value\n",
+    "\n",
+    "    def display(self):\n",
+    "        print(f'The value is: {self.value}')\n",
+    "\n",
+    "# Creating an instance of the Example class\n",
+    "example_instance = Example(10)\n",
+    "example_instance.display()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " ### Atributos y métodos.\n",
+    "\n",
+    "Los atributos y métodos en Programación Orientada a Objetos (POO) en Python son componentes clave de las clases.\n",
+    "\n",
+    "- Atributos: Son variables que pertenecen a una clase o a una instancia de una clase. \n",
+    "\n",
+    "    - Los atributos de clase son compartidos por todas las instancias de la clase, \n",
+    "    - Los atributos de instancia son específicos de cada objeto.\n",
+    "\n",
+    "- Métodos: Son funciones definidas dentro de una clase que describen los comportamientos de los objetos de esa clase. Los métodos pueden acceder y modificar los atributos de la clase."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Estudiante:\n",
+    "    # Atributo de clase\n",
+    "    escuela = \"Mi Universidad\"\n",
+    "    \n",
+    "    def __init__(self, nombre):\n",
+    "        # Atributos de instancia\n",
+    "        self.nombre = nombre\n",
+    "        self.calificaciones = []\n",
+    "    \n",
+    "    # Método\n",
+    "    def agregar_calificacion(self, nota): \n",
+    "        self.calificaciones.append(nota)\n",
+    "        \n",
+    "\n",
+    "def agregar_calificacion(obj, nota):\n",
+    "        obj.calificaciones.append(nota)\n",
+    "                \n",
+    "#Estudiante.agregar_calificacion(juan, 10)\n",
+    "#Estudiante.agregar_calificacion(pedro, 7)\n",
+    "\n",
+    "#juan.agregar_calificacion(10)\n",
+    "#pedro.agregar_calificacion(8)\n",
+    "#pedro.agregar_calificacion(9)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 290,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Mi Universidad'"
+      ]
+     },
+     "execution_count": 290,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "Estudiante.escuela"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 291,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Nombre: Juan\n",
+      "Nombre: Pedro\n"
+     ]
+    }
+   ],
+   "source": [
+    "juan = Estudiante(\"Juan\")\n",
+    "pedro = Estudiante(\"Pedro\")\n",
+    "\n",
+    "print(f\"Nombre: {juan.nombre}\")\n",
+    "print(f\"Nombre: {pedro.nombre}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 292,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Otra Universidad'"
+      ]
+     },
+     "execution_count": 292,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "Estudiante.escuela = \"Otra Universidad\"\n",
+    "Estudiante.escuela"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 293,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Otra Universidad'"
+      ]
+     },
+     "execution_count": 293,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "juan.escuela "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 294,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Escuela de Juan: Otra Universidad\n",
+      "Escuela de Pedro: Otra Universidad\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(f\"Escuela de Juan: {juan.escuela}\")\n",
+    "print(f\"Escuela de Pedro: {pedro.escuela}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 295,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "juan.agregar_calificacion(10)\n",
+    "pedro.agregar_calificacion(8)\n",
+    "pedro.agregar_calificacion(9)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 296,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Calificaciones de Juan: [10]\n",
+      "Calificaciones de Pedro: [8, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(f\"Calificaciones de Juan: {juan.calificaciones}\")\n",
+    "print(f\"Calificaciones de Pedro: {pedro.calificaciones}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 297,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Calificaciones de Juan: [10, 10]\n",
+      "Calificaciones de Pedro: [8, 9, 7]\n"
+     ]
+    }
+   ],
+   "source": [
+    "Estudiante.agregar_calificacion(juan, 10)\n",
+    "Estudiante.agregar_calificacion(pedro, 7)\n",
+    "\n",
+    "print(f\"Calificaciones de Juan: {juan.calificaciones}\")\n",
+    "print(f\"Calificaciones de Pedro: {pedro.calificaciones}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ejemplo 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 298,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "mundo\n"
+     ]
+    }
+   ],
+   "source": [
+    "class punto:\n",
+    "    def __init__(self, x, y):\n",
+    "        self.x = x\n",
+    "        self.y = y\n",
+    "\n",
+    "p = punto(3,4)\n",
+    "p.z = \"mundo\" # Atributo dinámico \n",
+    "print(p.z)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "En Python, puedes agregar atributos a una instancia de una clase en cualquier momento, incluso después de que la instancia haya sido creada. Esto se debe a que Python permite la adición dinámica de atributos a los objetos. Aquí tienes un ejemplo:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 299,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "'int' object has no attribute 'hola'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[299], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m a \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m5\u001b[39m\n\u001b[0;32m----> 2\u001b[0m \u001b[43ma\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mhola\u001b[49m \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mmundo\u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;66;03m# ❌ Error: los tipos básicos no permiten atributos dinámicos\u001b[39;00m\n",
+      "\u001b[0;31mAttributeError\u001b[0m: 'int' object has no attribute 'hola'"
+     ]
+    }
+   ],
+   "source": [
+    "a = 5\n",
+    "a.hola = \"mundo\" # ❌ Error: los tipos básicos no permiten atributos dinámicos"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "'list' object has no attribute 'z'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[89], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m a \u001b[38;5;241m=\u001b[39m [\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124ma\u001b[39m\u001b[38;5;124m\"\u001b[39m,\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mb\u001b[39m\u001b[38;5;124m\"\u001b[39m,\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mc\u001b[39m\u001b[38;5;124m\"\u001b[39m]\n\u001b[0;32m----> 2\u001b[0m \u001b[43ma\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mz\u001b[49m \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mhola\u001b[39m\u001b[38;5;124m\"\u001b[39m \u001b[38;5;66;03m# ❌ Error: las listas no permiten atributos dinámicos\u001b[39;00m\n",
+      "\u001b[0;31mAttributeError\u001b[0m: 'list' object has no attribute 'z'"
+     ]
+    }
+   ],
+   "source": [
+    "a = [\"a\",\"b\",\"c\"]\n",
+    "a.z = \"hola\" # ❌ Error: las listas no permiten atributos dinámicos"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "no se pueden añadir atributos a tipos de datos inmutables como enteros, flotantes y cadenas, ni a tipos de datos integrados como listas y diccionarios, porque estos tipos están implementados en C y no permiten la adición dinámica de atributos.\n",
+    "\n",
+    "- Se intenta añadir un atributo new_attr a un entero (x), una lista (y), un flotante (z) y una cadena (s).\n",
+    "\n",
+    "- En cada caso, se lanza un AttributeError porque estos tipos de datos no permiten la adición dinámica de atributos.\n",
+    "\n",
+    "Esto se debe a que los tipos integrados en Python están diseñados para ser eficientes y seguros, y permitir la adición dinámica de atributos podría comprometer estas características.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "16\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Punto:\n",
+    "    def __init__(self, x, y):\n",
+    "        self.x = x\n",
+    "        self.y = y\n",
+    "        \n",
+    "x = Punto(3, 4)\n",
+    "\n",
+    "x.counter = 1\n",
+    "while x.counter < 10:\n",
+    "    x.counter = x.counter * 2\n",
+    "print(x.counter)\n",
+    "del x.counter\n",
+    "#print(x.counter) # ❌ Error: el atributo counter no existe"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Atributos de clase vs Atributos de instancia ( Variables de clase y de instancia )\n",
+    "\n",
+    "En general, las variables de instancia son para datos únicos de cada instancia y las variables de clase son para atributos y métodos compartidos por todas las instancias de la clase:\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 300,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('canine', 'canine', 'canine')"
+      ]
+     },
+     "execution_count": 300,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "class Dog:\n",
+    "    \n",
+    "    kind = 'canine'         # class variable shared by all instances\n",
+    "\n",
+    "    def __init__(self, name):\n",
+    "        self.name = name    # instance variable unique to each instance\n",
+    "\n",
+    "d = Dog('Fido')\n",
+    "e = Dog('Buddy')\n",
+    "\n",
+    "d.kind,e.kind,Dog.kind                  # shared by all dogs"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('Fido', 'Buddy')"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.name, e.name    # unique to d y e"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Los datos compartidos pueden tener efectos inesperados que involucren objetos mutable como ser listas y diccionarios. Por ejemplo, la lista tricks en el siguiente código no debería ser usada como variable de clase porque una sola lista sería compartida por todos las instancias de Dog:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 302,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Perro:\n",
+    "    \n",
+    "    trucos = []          # ❌ Error: trucos es una variable de clase y se comparte entre todas las instancias\n",
+    "\n",
+    "    def __init__(self, nombre):\n",
+    "        self.nombre = nombre\n",
+    "\n",
+    "    def añadir_truco(self, nombre):\n",
+    "        self.trucos.append(nombre)\n",
+    "\n",
+    "d = Perro('Solovino')\n",
+    "e = Perro('Firulais')\n",
+    "d.añadir_truco('da la pata')\n",
+    "e.añadir_truco('gira')\n",
+    "e.añadir_truco('haste el muerto')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 303,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['da la pata', 'gira', 'haste el muerto']"
+      ]
+     },
+     "execution_count": 303,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.trucos  #❌ Error: tricks es una variable de clase y se comparte entre todas las instancias               \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 304,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['da la pata', 'gira', 'haste el muerto']"
+      ]
+     },
+     "execution_count": 304,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "e.trucos"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "El diseño correcto de esta clase sería usando una variable de instancia:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Perro:\n",
+    "    \n",
+    "    \n",
+    "\n",
+    "    def __init__(self, nombre):\n",
+    "        self.nombre = nombre\n",
+    "        self.trucos = []    # ✅ crea una nueva lista para cada perro\n",
+    "\n",
+    "    def añadir_truco(self, nombre):\n",
+    "        \n",
+    "        self.trucos.append(nombre)\n",
+    "\n",
+    "d = Perro('Solovino')\n",
+    "e = Perro('Firulais')\n",
+    "d.añadir_truco('da la pata')\n",
+    "e.añadir_truco('gira')\n",
+    "e.añadir_truco('haste el muerto')\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 307,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(['da la pata'], ['gira', 'haste el muerto'])"
+      ]
+     },
+     "execution_count": 307,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.trucos,e.trucos"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A menudo, el primer argumento de un método se llama self (uno mismo). Esto es una convención: el nombre self no significa nada en especial para Python. \n",
+    "\n",
+    "Observá que, sin embargo, si no sigues la convención tu código puede resultar menos legible a otros programadores de Python."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# funcion fuera de la clase\n",
+    "def f1(self, x, y):\n",
+    "    return min(x, x+y)\n",
+    "\n",
+    "class C:\n",
+    "    f = f1\n",
+    "\n",
+    "    def g(self):\n",
+    "        return 'Hola Mundo'\n",
+    "\n",
+    "    h = g\n",
+    "    \n",
+    "a = C()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 108,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 108,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.f(4,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 109,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('Hola Mundo', 'Hola Mundo')"
+      ]
+     },
+     "execution_count": 109,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.g(),a.h()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "No es necesario que la definición de la función esté textualmente dentro de la definición de la clase: asignando un función a una variable local en la clase también está bien. \n",
+    "\n",
+    "Fijate que esta práctica normalmente sólo sirve para confundir al que lea un programa."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Self\n",
+    "\n",
+    "Los métodos pueden llamar a otros métodos de la instancia usando el argumento **self**:\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class MiClase:\n",
+    "    def __init__(self):\n",
+    "        self.data = []\n",
+    "\n",
+    "    def add(self, x):\n",
+    "        self.data.append(x)\n",
+    "\n",
+    "    def addtwice(self, x):\n",
+    "        self.add(x)\n",
+    "        self.add(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b = MiClase()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b.add(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b.addtwice(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[10, 5, 5]"
+      ]
+     },
+     "execution_count": 115,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b.data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b.data.append(7)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[10, 5, 5, 7]"
+      ]
+     },
+     "execution_count": 117,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b.data"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Ejemplo:\n",
+    "\n",
+    "Modifica la siguiente clase Persona, la cual cada objeto, tenga un nombre distinto"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Michel está caminando\n",
+      "Michel\n",
+      "18\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Persona: \n",
+    "\t# atributos\n",
+    "\tnombre = \"Michel\"\n",
+    "\tedad = 18 \n",
+    "\t\n",
+    "\t# metodos\n",
+    "\tdef camina(self):\n",
+    "\t\tprint(self.nombre + \" está caminando\")\n",
+    "  \n",
+    "p1 = Persona() # la variable p1 contiene un objeto de la clase Persona\n",
+    "p1.camina()\n",
+    "print(p1.nombre)  \n",
+    "print(p1.edad)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 121,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Michel está caminando\n",
+      "Michel\n",
+      "18\n"
+     ]
+    }
+   ],
+   "source": [
+    "p3 = Persona() \n",
+    "p3.camina()\n",
+    "print(p3.nombre)  \n",
+    "print(p3.edad)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Una posible solucion es:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Michel está caminando\n",
+      "Michel\n",
+      "18\n",
+      "Juan está caminando\n",
+      "Juan\n",
+      "18\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Persona: \n",
+    "\t# atributos\n",
+    "    num_personas = 0\n",
+    "    \n",
+    "    def __init__(self,nombre,edad):\n",
+    "        self.nombre = nombre\n",
+    "        self.edad = edad\n",
+    "        Persona.num_personas +=1\n",
+    "    \n",
+    "    # metodos\n",
+    "    def camina(self):\n",
+    "        print(self.nombre + \" está caminando\")\n",
+    "        \n",
+    "    def numeroPersonas():\n",
+    "        print(f\"Existen {Persona.num_personas} personas \")\n",
+    "  \n",
+    "p1 = Persona(\"Michel\",18) # la variable p1 contiene un objeto de la clase Persona\n",
+    "p1.camina()\n",
+    "print(p1.nombre)  \n",
+    "print(p1.edad)\n",
+    "\n",
+    "p3 = Persona(\"Juan\",18) # la variable p1 contiene un objeto de la clase Persona\n",
+    "p3.camina()\n",
+    "print(p3.nombre)  \n",
+    "print(p3.edad)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Existen 2 personas \n"
+     ]
+    }
+   ],
+   "source": [
+    "Persona.numeroPersonas()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Ejercicio 1\n",
+    "Crea la clase Coche que contenga las siguientes propiedades:\n",
+    "\n",
+    "- matrícula (string)\n",
+    "- marca (string)\n",
+    "- kilometros_recorridos (float)\n",
+    "- gasolina (float)\n",
+    "\n",
+    "La clase tendrá un método llamado avanzar() que recibirá como argumento el número de kilómetros a conducir y sumará los kilómetros recorridos al valor de la propiedad kilometros_recorridos. El método también restará al valor de gasolina el resultado de los kilómetros multiplicado por 0'1. La clase también contendrá otro método llamado repostar() que recibirá como argumento los litros introducidos que deberán sumarse a la variable gasolina. Por último, será necesario controlar que el método avanzar nunca obtendrá un número negativo en la gasolina. En dicho caso, deberá mostrar el siguiente mensaje: \"Es necesario repostar para recorrer la cantidad indicada de kilómetros\".\n",
+    "\n",
+    "Ejemplo:\n",
+    "\n",
+    "- avanzar(50) # gasolina = 50\n",
+    "- avanzar(100) # kilometros_recorridos = 100, gasolina = 40\n",
+    "- avanzar(40) # kilometros_recorridos = 140, gasolina = 36\n",
+    "- avanzar(180) # kilometros_recorridos = 320, gasolina = 18"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Ejercicio 2\n",
+    "\n",
+    "Crea una clase Robot que simule los movimientos de un robot y calcule la posición en la que se encuentra cada momento. El robot se moverá por un tablero infinito de coordenadas X e Y, podrá realizar los siguientes movimientos:\n",
+    "\n",
+    "Avanzar hacia adelante (A)\n",
+    "Retroceder (R)\n",
+    "Avanzar hacia la izquierda (I) o hacia la derecha (D)\n",
+    "El robot tendrá un método llamado mueve() que recibirá la orden como parámetro y otro método, posicion_actual(), que indicará su posición en las coordenadas X e Y. Al crear el robot este se inicializará a las coordenadas (0,0).\n",
+    "\n",
+    "Puedes utilizar el siguiente código para probar la clase creada:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```\n",
+    "miRobot = Robot()\n",
+    "orden = \"A\"\n",
+    "while orden != 'fin':\n",
+    "    orden = input(\"Introduce la orden: \")\n",
+    "    miRobot.mueve(orden)\n",
+    "    print(miRobot.posicion_actual())\n",
+    "```\n",
+    "\n",
+    "\n",
+    "```\n",
+    ">> Introduce la orden: A\n",
+    "Posición actual: 1,0\n",
+    ">> Introduce la orden: A\n",
+    "Posición actual: 2,0\n",
+    ">> Introduce la orden: I\n",
+    "Posición actual: 2,-1\n",
+    ">> Introduce la orden: A\n",
+    "Posición actual: 3,-1\n",
+    ">> Introduce la orden: I\n",
+    "Posición actual: 3,-2\n",
+    ">> Introduce la orden: D\n",
+    "Posición actual: 3,-1\n",
+    ">> Introduce la orden: R\n",
+    "Posición actual: 2,-1\n",
+    ">> Introduce la orden: fin\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Private y protected\n",
+    "\n",
+    "A diferencia de otros lenguajes de Programación Orientada a Objetos, todos los métodos y atributos en Python son públicos. Es decir, no es posible definir una variable como private o protected.\n",
+    "\n",
+    "Existe una convención de añadir como prefijo un guión bajo (_) a los atributos que consideramos como protected y dos guiones bajos (__) a las variables que consideramos private."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Persona:\n",
+    "    def __init__(self, nombre, edad):\n",
+    "        self._nombre = nombre  # atributo protected \n",
+    "        self.__edad = edad # atributo private\n",
+    "        \n",
+    "    def muestra(self):\n",
+    "        print(f\"{self._nombre} tiene {self.__edad} años\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "p1 = Persona(\"Michel\",18)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Michel'"
+      ]
+     },
+     "execution_count": 128,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "p1._nombre"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "'Persona' object has no attribute '__edad'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[129], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[43mp1\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m__edad\u001b[49m\n",
+      "\u001b[0;31mAttributeError\u001b[0m: 'Persona' object has no attribute '__edad'"
+     ]
+    }
+   ],
+   "source": [
+    "p1.__edad"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Michel tiene 18 años\n"
+     ]
+    }
+   ],
+   "source": [
+    "p1.muestra()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Crear un contador, funcional vs POO"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 174,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "1\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "def crear_contador():\n",
+    "    contador = 0\n",
+    "    \n",
+    "    def incrementar():\n",
+    "        nonlocal contador\n",
+    "        contador += 1\n",
+    "        return contador\n",
+    "    \n",
+    "    def decrementar():\n",
+    "        nonlocal contador\n",
+    "        contador -= 1\n",
+    "        return contador\n",
+    "    \n",
+    "    def obtener_valor():\n",
+    "        return contador  # Solo lectura, no necesita nonlocal\n",
+    "    \n",
+    "    return {\n",
+    "        'incrementar': incrementar,\n",
+    "        'decrementar': decrementar,\n",
+    "        'obtener': obtener_valor\n",
+    "    }\n",
+    "\n",
+    "# Uso del contador\n",
+    "mi_contador = crear_contador()\n",
+    "print(mi_contador['incrementar']())  \n",
+    "print(mi_contador['incrementar']())  \n",
+    "print(mi_contador['decrementar']())  \n",
+    "print(mi_contador['obtener']())      "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 175,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "1\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Contador:\n",
+    "    def __init__(self):\n",
+    "        self.contador = 0\n",
+    "        \n",
+    "    def incrementar(self):\n",
+    "        self.contador += 1\n",
+    "        return self.contador\n",
+    "    \n",
+    "    def decrementar(self):\n",
+    "        self.contador -= 1\n",
+    "        return self.contador\n",
+    "    \n",
+    "    def obtener_valor(self):\n",
+    "        return self.contador\n",
+    "    \n",
+    "mi_contador = Contador()\n",
+    "print(mi_contador.incrementar())\n",
+    "print(mi_contador.incrementar())\n",
+    "print(mi_contador.decrementar())\n",
+    "print(mi_contador.obtener_valor())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Herencia"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La sintaxis para una definición de clase derivada se ve así:\n",
+    "\n",
+    "```\n",
+    "class DerivedClassName(BaseClassName):\n",
+    "    <statement-1>\n",
+    "    .\n",
+    "    .\n",
+    "    .\n",
+    "    <statement-N>\n",
+    "\n",
+    "```\n",
+    "\n",
+    "Python tiene dos funciones integradas que funcionan con herencia:\n",
+    "\n",
+    "Usar **isinstance()** para verificar el tipo de una instancia: isinstance(obj, int) será True sólo si obj.__class__ es int o alguna clase derivada de int.\n",
+    "\n",
+    "Usar **issubclass()** para verificar la herencia de clases: issubclass(bool, int) es True ya que bool es una subclase de int. Sin embargo, issubclass(float, int) es False ya que float no es una subclase de int.\n",
+    "\n",
+    "\n",
+    "Por ejemplo, todas las clases heredan de object, por lo tanto cualquier caso de herencia múltiple provee más de un camino para llegar a object. Para que las clases base no sean accedidas más de una vez, el algoritmo dinámico hace lineal el orden de búsqueda de manera que se preserve el orden de izquierda a derecha especificado en cada clase, que se llame a cada clase base sólo una vez, y que sea monótona (lo cual significa que una clase puede tener clases derivadas sin afectar el orden de precedencia de sus clases bases).\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class A:\n",
+    "    def __init__(self,a):\n",
+    "        self.a = a\n",
+    "        \n",
+    "    def muestra(self):\n",
+    "        print(f\"En clase A, Valor a-> {self.a}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "En clase A, Valor a-> 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "Obj_a = A(5)\n",
+    "Obj_a.muestra()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "En clase B, Valor b-> 3\n",
+      "En clase A, Valor a-> 2\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Op 1\n",
+    "class B(A):\n",
+    "    def __init__(self,a,b):\n",
+    "        A.__init__(self,a)\n",
+    "        self.b = b\n",
+    "        \n",
+    "    def muestra(self):\n",
+    "        print(f\"En clase B, Valor b-> {self.b}\")\n",
+    "        A.muestra(self)\n",
+    "        \n",
+    "obj_b = B(2,3)\n",
+    "obj_b.muestra()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "En clase B, Valor b-> 3\n",
+      "En clase A, Valor a-> 2\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Op 2\n",
+    "class B(A):\n",
+    "    def __init__(self,a,b):\n",
+    "        self.a = a\n",
+    "        self.b = b\n",
+    "        \n",
+    "    def muestra(self):\n",
+    "        print(f\"En clase B, Valor b-> {self.b}\")\n",
+    "        A.muestra(self)\n",
+    "        \n",
+    "obj_b = B(2,3)\n",
+    "obj_b.muestra()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "En clase B, Valor b-> 3\n",
+      "En clase A, Valor a-> 2\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Op 3\n",
+    "class B(A):\n",
+    "    def __init__(self,a,b):\n",
+    "        super().__init__(a)\n",
+    "        self.b = b\n",
+    "        \n",
+    "    def muestra(self):\n",
+    "        print(f\"En clase B, Valor b-> {self.b}\")\n",
+    "        A.muestra(self)\n",
+    "        \n",
+    "obj_b = B(2,3)\n",
+    "obj_b.muestra()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 151,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Imaginemos que la clase A se modifica para incluir validación\n",
+    "class A:\n",
+    "    def __init__(self, a):\n",
+    "        if not isinstance(a, (int, float)):\n",
+    "            raise ValueError(\"'a' debe ser un número\")\n",
+    "        self.a = a\n",
+    "        self._inicializar_a()  # Método adicional\n",
+    "        \n",
+    "    def _inicializar_a(self):\n",
+    "        self.a_procesado = self.a * 2\n",
+    "\n",
+    "# Con Opción 1: Funciona pero es rígido\n",
+    "class B1(A):\n",
+    "    def __init__(self, a, b):\n",
+    "        A.__init__(self, a)  # Acoplado al nombre de la clase\n",
+    "\n",
+    "# Con Opción 2: Pierde la validación y el procesamiento\n",
+    "class B2(A):\n",
+    "    def __init__(self, a, b):\n",
+    "        self.a = a  # ❌ Se pierde la validación y _inicializar_a()\n",
+    "        self.b = b\n",
+    "\n",
+    "# Con Opción 3: Mantiene toda la funcionalidad\n",
+    "class B3(A):\n",
+    "    def __init__(self, a, b):\n",
+    "        super().__init__(a)  # ✅ Mantiene toda la lógica del padre\n",
+    "        self.b = b\n",
+    "        \n",
+    "# Opción 3 -> Es más limpio y permite aprovechar \n",
+    "# la resolución de métodos (MRO, Method Resolution Order) \n",
+    "# en casos de herencia múltiple."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### La subclase puede añadir funcionalidades. \n",
+    "\n",
+    "Esta técnica permite reutilizar código."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 172,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Id: 0001, Marca: Logitech, tipo: AZERTY\n",
+      "¡Conectado!\n",
+      "a\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Dispositivo:\n",
+    "    def __init__(self,identificador,marca):\n",
+    "        self.identificador = identificador\n",
+    "        self.marca = marca\n",
+    "\n",
+    "    def conectar(self):\n",
+    "        print(\"¡Conectado!\")\n",
+    "\n",
+    "# la clase base se indica entre paréntesis\n",
+    "class Teclado(Dispositivo):\n",
+    "\tdef __init__(self,identificador,marca,tipo):\n",
+    "\t\t# llamada al constructor del padre\n",
+    "\t\tsuper().__init__(identificador,marca)\n",
+    "\t\tself.tipo = tipo\n",
+    "\n",
+    "\t# metodo de la subclase\n",
+    "\tdef pulsar_tecla(self,tecla):\n",
+    "\t\tprint(tecla)\n",
+    "\n",
+    "t1 = Teclado(\"0001\", \"Logitech\", \"AZERTY\")\n",
+    "print(f\"Id: {t1.identificador}, Marca: {t1.marca}, tipo: {t1.tipo}\")\n",
+    "t1.conectar()\n",
+    "t1.pulsar_tecla(\"a\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Polimorfismo\n",
+    "\n",
+    "Permite a distintos objetos responder de manera diferente a un mismo llamado de método.\n",
+    "\n",
+    "Una de las ventajas del polimorfismo es que nos permite escribir código más genérico, lo que a su vez nos permite reutilizar nuestro código en una variedad de situaciones.\n",
+    "\n",
+    "El polimorfismo está exhibiendo un comportamiento diferente en diferentes condiciones. El polimorfismo viene en dos sabores."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Método de sobrecarga\n",
+    "- Método Anulado\n",
+    "\n",
+    "Python no admite la sobrecarga de métodos como otros idiomas. Simplemente reemplazará la última función definida como la última definición. Sin embargo, podemos intentar lograr un resultado similar a la sobrecarga utilizando * args o usando argumentos opcionales."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 173,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "12\n"
+     ]
+    }
+   ],
+   "source": [
+    "class OptionalArgDemo:\n",
+    "    def addNums(self, i, j, k=0):\n",
+    "        return i + j + k\n",
+    "\n",
+    "o = OptionalArgDemo()\n",
+    "print(o.addNums(2,3))\n",
+    "print(o.addNums(2,3,7))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "El polimorfismo en tiempo de ejecución no es más que una anulación del método. Funciona en conjunto con la herencia.\n",
+    "\n",
+    "La anulación del método es un concepto en el que, aunque el nombre del método y los parámetros pasados son similares, el comportamiento es diferente según el tipo de objeto."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 101,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Animal:\n",
+    "    def makeNoise(self):\n",
+    "        raise NotImplementedError\n",
+    "\n",
+    "class Cat(Animal):\n",
+    "    def makeNoise(self):\n",
+    "        print(\"Meoooowwwww\")\n",
+    "        \n",
+    "class Dog(Animal):\n",
+    "    def makeNoise(self):\n",
+    "        print(\"Woooooof\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Meoooowwwww\n",
+      "Woooooof\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = Cat();\n",
+    "a.makeNoise() \n",
+    "\n",
+    "a = Dog();\n",
+    "a.makeNoise() "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 108,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Figura:\n",
+    "    def area(self):\n",
+    "        pass\n",
+    "\n",
+    "class Cuadrado(Figura):\n",
+    "    def __init__(self, lado):\n",
+    "        self.lado = lado\n",
+    "\n",
+    "    def area(self):\n",
+    "        return self.lado * self.lado\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 109,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def calcular_area(figura):\n",
+    "    return figura.area()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "25\n",
+      "28.274328\n",
+      "10.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "cuadrado = Cuadrado(5)\n",
+    "circulo = Circulo(3)\n",
+    "triangulo = Triangulo(4, 5)\n",
+    "\n",
+    "print(calcular_area(cuadrado))\n",
+    "print(calcular_area(circulo))\n",
+    "print(calcular_area(triangulo))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Circulo(Figura):\n",
+    "    def __init__(self, Radio):\n",
+    "        self.Radio = Radio\n",
+    "\n",
+    "    def area(self):\n",
+    "        return 3.141592 * self.Radio**2 \n",
+    "    \n",
+    "    \n",
+    "class Triangulo(Figura):\n",
+    "    def __init__(self, base,altura):\n",
+    "        self.base = base\n",
+    "        self.altura = altura\n",
+    "\n",
+    "    def area(self):\n",
+    "        return (self.base * self.altura)/2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Encapsulamiento\n",
+    "\n",
+    "El Encapsulamiento es una técnica en la programación orientada a objetos que nos permite ocultar los detalles internos de los objetos y exponer solo sus interfaces. En otras palabras, el encapsulamiento nos proporciona una capa adicional de seguridad al asegurarse de que los datos se manipulan solo a través de los métodos definidos en la interfaz.\n",
+    "\n",
+    "\n",
+    "Por ejemplo, supongamos que tenemos una clase Persona que tiene un atributo edad. Si no utilizamos el encapsulamiento, cualquier otro código podría modificar el valor de edad del objeto Persona sin restricciones. Así que, ¡de repente, una persona puede tener 500 años en nuestro sistema!\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "500\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Persona:\n",
+    "    def __init__(self, edad):\n",
+    "        self.edad = edad\n",
+    "\n",
+    "persona = Persona(28)\n",
+    "persona.edad = 500 # Esto no debería ser posible sin encapsulamiento\n",
+    "print(persona.edad)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Para tener más control sobre los datos almacenados en nuestro objeto, podemos aplicar el encapsulamiento y convertir el atributo de la edad en un atributo de solo lectura utilizando el siguiente código:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "property 'edad' of 'Persona' object has no setter",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[1;32m/Users/michel/1_CUCEI_2023B/Prope/VsEjs/main.ipynb Celda 102\u001b[0m line \u001b[0;36m1\n\u001b[1;32m      <a href='vscode-notebook-cell:/Users/michel/1_CUCEI_2023B/Prope/VsEjs/main.ipynb#Y225sZmlsZQ%3D%3D?line=8'>9</a>\u001b[0m persona \u001b[39m=\u001b[39m Persona(\u001b[39m28\u001b[39m)\n\u001b[1;32m     <a href='vscode-notebook-cell:/Users/michel/1_CUCEI_2023B/Prope/VsEjs/main.ipynb#Y225sZmlsZQ%3D%3D?line=9'>10</a>\u001b[0m persona\u001b[39m.\u001b[39medad \u001b[39m# Retorna 28\u001b[39;00m\n\u001b[0;32m---> <a href='vscode-notebook-cell:/Users/michel/1_CUCEI_2023B/Prope/VsEjs/main.ipynb#Y225sZmlsZQ%3D%3D?line=10'>11</a>\u001b[0m persona\u001b[39m.\u001b[39medad \u001b[39m=\u001b[39m \u001b[39m500\u001b[39m\n",
+      "\u001b[0;31mAttributeError\u001b[0m: property 'edad' of 'Persona' object has no setter"
+     ]
+    }
+   ],
+   "source": [
+    "class Persona:\n",
+    "    def __init__(self, edad):\n",
+    "        self.__edad = edad\n",
+    "\n",
+    "    @property\n",
+    "    def edad(self):\n",
+    "        return self.__edad\n",
+    "\n",
+    "persona = Persona(28)\n",
+    "persona.edad # Retorna 28\n",
+    "persona.edad = 500 # Esto no es posible con encapsulamiento"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "En este ejemplo, hemos agregado el decorador @property sobre el método edad en la clase Persona. Este decorador es utilizado para convertir el método en una propiedad. Ahora podemos utilizar persona.edad para obtener el valor de edad sin necesidad de llamar al método edad() explícitamente."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Persona:\n",
+    "    def __init__(self, nombre, edad, direccion):\n",
+    "        self.nombre = nombre\n",
+    "        self.edad = edad\n",
+    "        self.__direccion = direccion\n",
+    "\n",
+    "    def setDireccion(self, direccion):\n",
+    "        self.__direccion = direccion\n",
+    "\n",
+    "    def getDireccion(self):\n",
+    "        return self.__direccion"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 121,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Calle Falsa 123\n"
+     ]
+    }
+   ],
+   "source": [
+    "p = Persona(\"Juan\", 25, \"Av. Siempre Viva 123\")\n",
+    "p.setDireccion(\"Calle Falsa 123\")\n",
+    "print(p.getDireccion())  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Las Propiedades son una técnica utilizada en Python para proporcionar un acceso seguro y controlado a los atributos de una clase. Son métodos que se comportan como atributos, lo que significa que podemos reemplazar los métodos de acceso y modificación normales por funciones de propiedad."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Persona:\n",
+    "    def __init__(self, nombre, edad, direccion):\n",
+    "        self.nombre = nombre\n",
+    "        self.edad = edad\n",
+    "        self.__direccion = direccion\n",
+    "\n",
+    "    @property\n",
+    "    def direccion(self):\n",
+    "        return self.__direccion\n",
+    "\n",
+    "    @direccion.setter\n",
+    "    def direccion(self, direccion):\n",
+    "        if direccion == \"Calle Falsa 123\":\n",
+    "            raise \"Error direccion falsa\"    \n",
+    "        self.__direccion = direccion"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "p = Persona(\"Juan\", 25, \"Av. Siempre Viva 123\")\n",
+    "#p.direccion = \"Calle Falsa 123\"\n",
+    "p.direccion = \"Calle Falsa 1234\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Es importante utilizar el Encapsulamiento y las Propiedades para controlar el acceso a los datos en nuestras clases de Python. Con ello podemos mantener nuestros datos privados, aumentar la seguridad y asegurarnos de no permitir modificaciones no deseadas de los datos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Reverse:\n",
+    "    \"\"\"Iterator for looping over a sequence backwards.\"\"\"\n",
+    "    def __init__(self, data):\n",
+    "        self.data = data\n",
+    "        self.index = len(data)\n",
+    "\n",
+    "    def __iter__(self):\n",
+    "        return self\n",
+    "\n",
+    "    def __next__(self):\n",
+    "        if self.index == 0:\n",
+    "            raise StopIteration\n",
+    "        self.index = self.index - 1\n",
+    "        return self.data[self.index]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rev = Reverse('spam')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<__main__.Reverse at 0x10e3b5d50>"
+      ]
+     },
+     "execution_count": 130,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "iter(rev)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "m\n",
+      "a\n",
+      "p\n",
+      "s\n"
+     ]
+    }
+   ],
+   "source": [
+    "for char in rev:\n",
+    "    print(char)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Ejemplos: "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Toyota Corolla (2020)\n",
+      "Kilometraje: 15000\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Auto:\n",
+    "    def __init__(self, marca, modelo, año):\n",
+    "        self.marca = marca\n",
+    "        self.modelo = modelo\n",
+    "        self.año = año\n",
+    "        self.kilometraje = 0\n",
+    "\n",
+    "    def mostrar_descripcion(self):\n",
+    "        return f\"{self.marca} {self.modelo} ({self.año})\"\n",
+    "\n",
+    "    def actualizar_kilometraje(self, km):\n",
+    "        if km >= self.kilometraje:\n",
+    "            self.kilometraje = km\n",
+    "        else:\n",
+    "            print(\"No puedes reducir el kilometraje.\")\n",
+    "\n",
+    "# Crear una instancia de Auto\n",
+    "mi_auto = Auto(\"Toyota\", \"Corolla\", 2020)\n",
+    "\n",
+    "# Mostrar descripción del auto\n",
+    "print(mi_auto.mostrar_descripcion())\n",
+    "\n",
+    "# Actualizar y mostrar kilometraje\n",
+    "mi_auto.actualizar_kilometraje(15000)\n",
+    "print(f\"Kilometraje: {mi_auto.kilometraje}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 179,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Tesla Model S (2022)\n",
+      "Autonomía de la batería: 600 km\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Auto:\n",
+    "    def __init__(self, marca, modelo, año):\n",
+    "        self.marca = marca\n",
+    "        self.modelo = modelo\n",
+    "        self.año = año\n",
+    "        self.kilometraje = 0\n",
+    "\n",
+    "    def mostrar_descripcion(self):\n",
+    "        return f\"{self.marca} {self.modelo} ({self.año})\"\n",
+    "\n",
+    "    def actualizar_kilometraje(self, km):\n",
+    "        if km >= self.kilometraje:\n",
+    "            self.kilometraje = km\n",
+    "        else:\n",
+    "            print(\"No puedes reducir el kilometraje.\")\n",
+    "\n",
+    "class AutoElectrico(Auto):\n",
+    "    def __init__(self, marca, modelo, año, autonomia_bateria):\n",
+    "        super().__init__(marca, modelo, año)\n",
+    "        self.autonomia_bateria = autonomia_bateria\n",
+    "\n",
+    "    def mostrar_autonomia(self):\n",
+    "        return f\"Autonomía de la batería: {self.autonomia_bateria} km\"\n",
+    "\n",
+    "# Crear una instancia de AutoElectrico\n",
+    "mi_auto_electrico = AutoElectrico(\"Tesla\", \"Model S\", 2022, 600)\n",
+    "\n",
+    "# Mostrar descripción y autonomía del auto eléctrico\n",
+    "print(mi_auto_electrico.mostrar_descripcion())\n",
+    "print(mi_auto_electrico.mostrar_autonomia())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 188,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "AutoGasolina.__init__() missing 1 required positional argument: 'capacidad_tanque'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[188], line 39\u001b[0m\n\u001b[1;32m     36\u001b[0m         AutoGasolina\u001b[38;5;241m.\u001b[39m\u001b[38;5;21m__init__\u001b[39m(\u001b[38;5;28mself\u001b[39m, marca, modelo, año, capacidad_tanque)\n\u001b[1;32m     38\u001b[0m \u001b[38;5;66;03m# Crear una instancia de AutoHibrido\u001b[39;00m\n\u001b[0;32m---> 39\u001b[0m mi_auto_hibrido \u001b[38;5;241m=\u001b[39m \u001b[43mAutoHibrido\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mToyota\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mPrius\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m2021\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m500\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m45\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[1;32m     40\u001b[0m \u001b[38;5;66;03m#\u001b[39;00m\n\u001b[1;32m     41\u001b[0m \u001b[38;5;66;03m## Mostrar descripción, autonomía y capacidad del tanque\u001b[39;00m\n\u001b[1;32m     42\u001b[0m \u001b[38;5;66;03m#print(mi_auto_hibrido.mostrar_descripcion())\u001b[39;00m\n\u001b[1;32m     43\u001b[0m \u001b[38;5;66;03m#print(mi_auto_hibrido.mostrar_autonomia())\u001b[39;00m\n\u001b[1;32m     44\u001b[0m \u001b[38;5;66;03m#print(mi_auto_hibrido.mostrar_capacidad_tanque())\u001b[39;00m\n",
+      "Cell \u001b[0;32mIn[188], line 35\u001b[0m, in \u001b[0;36mAutoHibrido.__init__\u001b[0;34m(self, marca, modelo, año, autonomia_bateria, capacidad_tanque)\u001b[0m\n\u001b[1;32m     34\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m__init__\u001b[39m(\u001b[38;5;28mself\u001b[39m, marca, modelo, año, autonomia_bateria, capacidad_tanque):\n\u001b[0;32m---> 35\u001b[0m     \u001b[43mAutoElectrico\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[38;5;21;43m__init__\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmarca\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmodelo\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43maño\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mautonomia_bateria\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     36\u001b[0m     AutoGasolina\u001b[38;5;241m.\u001b[39m\u001b[38;5;21m__init__\u001b[39m(\u001b[38;5;28mself\u001b[39m, marca, modelo, año, capacidad_tanque)\n",
+      "Cell \u001b[0;32mIn[188], line 19\u001b[0m, in \u001b[0;36mAutoElectrico.__init__\u001b[0;34m(self, marca, modelo, año, autonomia_bateria)\u001b[0m\n\u001b[1;32m     18\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21m__init__\u001b[39m(\u001b[38;5;28mself\u001b[39m, marca, modelo, año, autonomia_bateria):\n\u001b[0;32m---> 19\u001b[0m     \u001b[38;5;28;43msuper\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[38;5;21;43m__init__\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mmarca\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmodelo\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43maño\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     20\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mautonomia_bateria \u001b[38;5;241m=\u001b[39m autonomia_bateria\n",
+      "\u001b[0;31mTypeError\u001b[0m: AutoGasolina.__init__() missing 1 required positional argument: 'capacidad_tanque'"
+     ]
+    }
+   ],
+   "source": [
+    "class Auto:\n",
+    "    def __init__(self, marca, modelo, año):\n",
+    "        self.marca = marca\n",
+    "        self.modelo = modelo\n",
+    "        self.año = año\n",
+    "        self.kilometraje = 0\n",
+    "\n",
+    "    def mostrar_descripcion(self):\n",
+    "        return f\"{self.marca} {self.modelo} ({self.año})\"\n",
+    "\n",
+    "    def actualizar_kilometraje(self, km):\n",
+    "        if km >= self.kilometraje:\n",
+    "            self.kilometraje = km\n",
+    "        else:\n",
+    "            print(\"No puedes reducir el kilometraje.\")\n",
+    "\n",
+    "class AutoElectrico(Auto):\n",
+    "    def __init__(self, marca, modelo, año, autonomia_bateria):\n",
+    "        super().__init__(marca, modelo, año)\n",
+    "        self.autonomia_bateria = autonomia_bateria\n",
+    "\n",
+    "    def mostrar_autonomia(self):\n",
+    "        return f\"Autonomía de la batería: {self.autonomia_bateria} km\"\n",
+    "\n",
+    "class AutoGasolina(Auto):\n",
+    "    def __init__(self, marca, modelo, año, capacidad_tanque):\n",
+    "        super().__init__(marca, modelo, año)\n",
+    "        self.capacidad_tanque = capacidad_tanque\n",
+    "\n",
+    "    def mostrar_capacidad_tanque(self):\n",
+    "        return f\"Capacidad del tanque: {self.capacidad_tanque} litros\"\n",
+    "\n",
+    "class AutoHibrido(AutoElectrico, AutoGasolina):\n",
+    "    def __init__(self, marca, modelo, año, autonomia_bateria, capacidad_tanque):\n",
+    "        AutoElectrico.__init__(self, marca, modelo, año, autonomia_bateria)\n",
+    "        AutoGasolina.__init__(self, marca, modelo, año, capacidad_tanque)\n",
+    "\n",
+    "# Crear una instancia de AutoHibrido\n",
+    "mi_auto_hibrido = AutoHibrido(\"Toyota\", \"Prius\", 2021, 500, 45)\n",
+    "#\n",
+    "## Mostrar descripción, autonomía y capacidad del tanque\n",
+    "#print(mi_auto_hibrido.mostrar_descripcion())\n",
+    "#print(mi_auto_hibrido.mostrar_autonomia())\n",
+    "#print(mi_auto_hibrido.mostrar_capacidad_tanque())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "UP2024",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
